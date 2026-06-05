@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual env
+venv/
+
+# Model files
+*.keras
+
+
+# Dataset
+UTKFace/
+archive/
+
+# macOS
+.DS_Store
+
+# Uploads
+backend/app/schema/mutations/uploads/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+venv/
+backend/venv/
+*.db
+.DS_Store
+node_modules/
+__pycache__/
+*.pyc
+.env
+*.egg-info/
+dist/
+build/

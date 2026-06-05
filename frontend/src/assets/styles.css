@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #fce7f3;
+    text-align: center;
+    display: grid;
+	grid-template-rows: repeat(100, 1%);
+	grid-template-columns: repeat(100, 1%);
+  }
+  
+  .hero {
+    background-image: url('/path-to-image.jpg');
+    padding: 50px;
+  }
+  
+  .features {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #app{
+    grid-row: 1/101;
+	grid-column: 1/101;
+    display: grid;
+	grid-template-rows: repeat(100, 1%);
+	grid-template-columns: repeat(100, 1%);
+  }
