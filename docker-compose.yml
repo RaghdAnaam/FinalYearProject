@@ -4,13 +4,14 @@ services:
   backend:
     build: ./backend
     ports:
-      - "8000:8000"
+      - "5001:5001"
     environment:
       - FLASK_DEBUG=1
       - FLASK_APP=wsgi:app
       - FLASK_ENV=development
       - DATABASE_URL=sqlite:////app/instance/database.db
       - PYTHONUNBUFFERED=1
+      - FLASK_RUN_PORT=5001
     volumes:
       - ./backend:/app  # ✅ This ensures /app is properly mapped
       - backend-data:/app/instance
