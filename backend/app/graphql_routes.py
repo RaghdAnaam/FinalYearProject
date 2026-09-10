@@ -1,4 +1,5 @@
 from flask import Blueprint
+import os
 from flask import make_response, request
 from flask_cors import CORS
 from graphene_file_upload.flask import FileUploadGraphQLView
@@ -9,12 +10,15 @@ import logging
 graphql_bp = Blueprint("graphql", __name__)
 
 # ✅ Let flask-cors handle everything properly
-CORS(graphql_bp, supports_credentials=True)
+ALLOWED_ORIGINS = [origin.strip() for origin in os.getenv("FRONTEND_ORIGINS", "http://localhost:5173,https://skin-vision-brown.vercel.app").split(",") if origin.strip()]
+CORS(graphql_bp, origins=ALLOWED_ORIGINS, supports_credentials=True)
 
 @graphql_bp.route("/", methods=["OPTIONS"])
 def graphql_options():
     response = make_response()
-    response.headers.add("Access-Control-Allow-Origin", "http://localhost:5173")
+    origin = request.headers.get("Origin")
+    if origin in ALLOWED_ORIGINS:
+        response.headers.add("Access-Control-Allow-Origin", origin)
     response.headers.add("Access-Control-Allow-Headers", "Content-Type, Authorization")
     response.headers.add("Access-Control-Allow-Methods", "POST, GET, OPTIONS")
     response.headers.add("Access-Control-Allow-Credentials", "true")
