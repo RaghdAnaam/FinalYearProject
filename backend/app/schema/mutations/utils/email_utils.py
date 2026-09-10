@@ -7,7 +7,7 @@ GMAIL_USER = os.getenv("GMAIL_USER")
 GMAIL_PASS = os.getenv("GMAIL_PASS")
 
 def send_reset_email(email, token):
-    reset_url = f"http://localhost:5173/reset-password?token={token}"
+    reset_url = f"https://skin-vision-brown.vercel.app/reset-password?token={token}"
     subject = "Reset your password"
     body = f"""
     <p>Hello,</p>
@@ -37,7 +37,7 @@ SMTP_PASS = os.getenv("SMTP_PASS")
 EMAIL_FROM_BREVO = os.getenv("EMAIL_FROM")
 
 def send_reset_email_brevo(email, token):
-    reset_url = f"http://localhost:5173/reset-password?token={token}"
+    reset_url = f"https://skin-vision-brown.vercel.app/reset-password?token={token}"
     subject = "Reset your password"
     body = f"""
     <p>Hello,</p>
