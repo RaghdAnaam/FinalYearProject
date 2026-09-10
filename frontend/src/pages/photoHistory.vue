@@ -36,7 +36,7 @@ export default {
 				// Fetch the photos using the GraphQL API
 
 				const token = localStorage.getItem('token');
-				const response = await fetch('http://localhost:5001/graphql/', {
+				const response = await fetch('https://skinvision-backend-2pho.onrender.com/graphql/', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',

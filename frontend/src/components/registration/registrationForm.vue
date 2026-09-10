@@ -154,7 +154,7 @@ export default {
             `;
 
 			try {
-				const response = await axios.post('http://localhost:5001/graphql/', {
+				const response = await axios.post('https://skinvision-backend-2pho.onrender.com/graphql/', {
 					query: mutation,
 				});
 

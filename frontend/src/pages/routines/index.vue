@@ -140,7 +140,7 @@ import axios from 'axios'
 import routineForm from '../../components/routine/routineForm.vue'
 import requests from '../../utils/requests'
 
-const GQL_URL = 'http://localhost:5001/graphql/'
+const GQL_URL = 'https://skinvision-backend-2pho.onrender.com/graphql/'
 
 export default {
   components: { routineForm },

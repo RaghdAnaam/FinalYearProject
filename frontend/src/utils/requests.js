@@ -5,7 +5,7 @@ export default async function requests(query, options = {}) {
   
   try {
     const response = await axios.post(
-      'http://localhost:5001/graphql/',
+      'https://skinvision-backend-2pho.onrender.com/graphql/',
       {
         query,
         variables: options.variables || {}

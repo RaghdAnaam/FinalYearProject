@@ -89,7 +89,7 @@ export default {
         }
 
         const response = await axios.post(
-          'http://localhost:5001/graphql/',
+          'https://skinvision-backend-2pho.onrender.com/graphql/',
           {
             query: `
               query {

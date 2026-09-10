@@ -224,7 +224,7 @@ export default {
 	`;
 
 			try {
-				const response = await fetch('http://localhost:5001/graphql/', {
+				const response = await fetch('https://skinvision-backend-2pho.onrender.com/graphql/', {
 					method: 'POST',
 					headers: {
 						Authorization: `Bearer ${token}`,

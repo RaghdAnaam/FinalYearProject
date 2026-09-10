@@ -62,7 +62,7 @@ export default {
 
       try {
         this.loading = true
-        const response = await axios.post('http://localhost:5001/graphql/', {
+        const response = await axios.post('https://skinvision-backend-2pho.onrender.com/graphql/', {
           query: `
             mutation ($email: String!, $password: String!) {
               loginAdmin(email: $email, password: $password) {

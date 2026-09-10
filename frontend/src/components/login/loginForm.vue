@@ -57,7 +57,7 @@ export default {
 		async sendForm() {
 			console.log('Entered');
 			try {
-				const response = await axios.post('http://localhost:5001/graphql/', {
+				const response = await axios.post('https://skinvision-backend-2pho.onrender.com/graphql/', {
 					query: `
                         mutation {
                             login(email: "${this.email}", password: "${this.password}") {
