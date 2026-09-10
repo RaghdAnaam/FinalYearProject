@@ -25,6 +25,15 @@ backend/app/schema/mutations/uploads/
 # Temporary files
 *.tmp
 
+# Local environment and deployment secrets
+.env
+.env.*
+!.env.example
+backend/.env
+
+# Local application data
+backend/instance/
+
 venv/
 backend/venv/
 *.db
