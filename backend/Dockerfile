@@ -18,6 +18,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy backend code AFTER dependencies are installed
 COPY . .
+
+# Create runtime directories before migrations run
+RUN mkdir -p /app/instance /app/app/schema/mutations/uploads
 # Copy and set up the entrypoint script
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
